@@ -4,9 +4,48 @@
     box-sizing:border-box;
 }
 body{
-    background-color: #000000;
+    background-color:black;
+    
 }
 .navbar{
     display: flex;
+    justify-content:space-between;
+    padding: 3% 5%;
+    
 }
+.navbar_brand{
+    width:100px;
+    height:100%;
 
+}
+.brand_logo{
+    width:100%;
+    height: 50px;
+
+}
+.Languages_drop_down{
+    background: transparent;
+    border: none;
+    color: white;
+}
+.Languages_drop_down{
+    outline: none;   
+}
+.dropdow__container{
+    border: 1px solid rgb(255, 255, 255);
+    padding: 0.6em;
+
+}
+.signin_button{
+    background-color:#E50914;
+    border: 1px solid #E50914;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+.nav_Items{
+    padding: none !important;
+    display: flex;
+    gap: 10px;
+    
+}
