@@ -1,189 +1,330 @@
-*{
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;800&display=swap");
+
+* {
     margin: 0;
     padding: 0;
-    box-sizing:border-box;
-}
-body{
-    background-color:black;
-    color: white;
-    font-family: "Poppins", sans-serif;
-      
-    
-}
-.navbar{
-    position:absolute;
-    top: 0;
-    width:100%;
-    display: flex;
-    justify-content:space-between;
-    padding: 1% 5%;
-    z-index: 10;
-    
-}
-.hero__bg__img_contener{
-    width:100%;
-    height:500vh;
-
-}
-.hero__bg__img__image{
-    width:100%;
-    height:90vh;
-    object-fit: cover;
-
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-
-.navbar_brand{
-    width:100px;
-    height:100%;
-
-}
-.brand_logo{
-    padding: 1px 10px;
-    width:100%;
-    height: 100%;
-
-}
-.Languages_drop_down{
-    background: transparent;
-    border: none;
-    color: white;
-}
-.Languages_drop_down{
-    outline: none;   
-}
-.dropdow__container{
-    border: 1px solid rgb(255, 255, 255);
-    padding: 0.6em;
-    border-radius: 5px;
-    font-size: 10px !important;
-
-}
-.signin_button{
-    background-color:#E50914;
-    border: 1px solid #E50914;
-    color: white;
-    padding: 0.25rem 0.5rem;
-    border-radius: 4px;
-}
-.nav_Items{
-    padding: none !important;
-    display: flex;
-    gap: 10px;
-    
-}
-.hero__bg__overlay{
-    position: absolute;
-    inset: 0;
-    width:100%;
-    height:90vh;
-    background: rgba(0, 0, 0, 0.8);
-}
-.hero_card{
-    position: absolute;
-    top: 20%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-
-}
-.label_email{
-    color: black;
-    position: absolute;
-    top:30%;
-    color: black;
-
+body {
+    background-color: #000;
+    color: #fff;
 }
 
-
-.hero_title{
-    font-size: 2.1rem;
-    font-weight: 100px;
-}
-.email_input{
-    border: none !important;
-    background: transparent !important;
+.header {
     width: 100%;
-    height:50%;
-}
-.form_container{
-    background-color: white;
-    width: 90%;
-    height:50px;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(./Assets/header-image.png);
+    background-size: cover;
+    background-position: center;
+    padding: 10px 8%;
     position: relative;
-
-}
-.email_input:focus+ .email_label{
-    top:1%;
-
-
-}
-.email_label{
-    color:black !important;
-    position: absolute;
-    top:50%;
-    left:1%;
-    color:rgb(97, 95, 95);
-    transition: 0.5s ease-in-out;
 }
 
-.email_container{
+nav {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
 }
 
-@media (min-width:768px) {
-
-    .hero_bg_img_contener{
-        height: 100vh;
-        
-    }
-    .hero__bg__overlay{
-        
-        width:100%;
-        height:100%;
-        background: rgba(2, 2, 2, 0.48);
-    }
-    
+.logo {
+    width: 150px;
+    cursor: pointer;
 }
 
-@media(min-width:1024px){
-    .navbar{
-        padding: 2% 5%;
-    }
-    .navbar_brand{
-        width: 800px;
-        height: 300px;
-    }
-    .signin_button{
-        padding: 10px 20px;
-        font-size: 50px !important;
-
-    }
-    .dropdow__container{
-        padding: 20px 20px;
-        font-size: 50px !important;
-
-
-    }
-    .nav_Items{
-        gap: 50px;
-
-    }
-    .hero__bg__overlay{
-        width:100%;
-        height:100vh;
-        background: rgba(2, 2, 2, 0.48);
-    }
-    .hero_title{
-        font-size: 100px!important;
-    }
-   
-
+nav button {
+    border: none;
+    outline: none;
+    background-color: #db0001;
+    color: #fff;
+    padding: 7px 20px;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
 }
-@media(min-width:1254px){
 
+.lang-btn {
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 7px 10px;
+}
+
+.lang-btn img {
+    width: 10px;
+    margin-left: 10px;
+} 
+
+.fa-globe {
+    color: #fff;
+    width: 10px;
+    margin-right: 10px;
+}
+
+.header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    margin-top: 100px;
+}
+
+.header-content h1 {
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 600;
+    max-width: 650px;
+}
+
+.header-content h3 {
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.email-signup {
+    background: #fff;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.email-signup input {
+    flex: 1;
+    border: 0;
+    outline: 0;
+    margin-left: 20px;
+}
+
+.email-signup button {
+    background-color: #db0001;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 15px 30px;
+}
+
+
+.features {
+    padding: 50px 12%;
+    font-size: 22px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+
+.text-col, .img-col {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.img-col img {
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+
+.features h2 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.faq {
+    padding: 10px 12%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.faq h2 {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.accordion {
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+
+.accordion li {
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.accordion li label {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+label::after {
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.accordion .content {
+    background-color: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.accordion input[type="radio"]:checked + label + .content {
+    max-height: 600px;
+    padding: 30px 20px;
+}
+
+.accordion input[type="radio"]:checked + label::after {
+    transform: rotate(135deg);
+}
+
+.faq small {
+    font-size: 13px;
+}
+
+.faq .email-signup {
+    max-width: 600px;
+    margin: 20px auto 60px;
+}
+
+
+.footer {
+    padding: 50px 15% 10px;
+    border-top: 6px solid #333;
+    color: #777;
+}
+
+.footer h2 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.footer .col {
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.footer .col a {
+    display: block;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.footer .row {
+    align-items: flex-start;
+    padding: 10px 0px;
+}
+
+.footer .lang-btn {
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+
+.copyright-text {
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .logo {
+        width: 100px;
+    }
+
+    nav button {
+        padding: 5px 10px;
+    }
+
+    nav .lang-btn {
+        padding: 4px 8px;
+    }
+
+    .header-content {
+        position: unset;
+        transform: none;
+        padding-top: 150px;
+    }
+
+    .header-content h1 {
+        font-size: 30px;
+    }
+
+    .email-signup button {
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+
+    .text-col, .img-col {
+        flex-basis: 100%;
+    }
+
+    .features h2 {
+        font-size: 30px;
+    }
+
+    .features p {
+        font-size: 15px;
+    }
+
+    .row:nth-child(2), .row:nth-child(4) {
+        flex-direction: column-reverse;
+    }
+
+    .features .row {
+        padding: 10px 0;
+    }
+
+    .faq h2 {
+        font-size: 20px;
+    }
+
+    .accordion .content {
+        font-size: 14px;
+    }
+
+    .accordion li label {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    label::after {
+        font-size: 22px;
+    }
 }
